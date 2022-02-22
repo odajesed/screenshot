@@ -7,7 +7,7 @@ pytesseract.pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesse
 custom_config = r'-c preserve_interword_spaces=1 --oem 1 --psm 1 -l eng+ita'
 texto = ''
 
-d = pytesseract.image_to_data(Image.open(r'test.jpg'), config=custom_config, output_type=Output.DICT)
+d = pytesseract.image_to_data(Image.open(r'savedimage.jpg'), config=custom_config, output_type=Output.DICT)
 df = pd.DataFrame(d)
 
 df1 = df[(df.conf!='-1')&(df.text!=' ')&(df.text!='')]
