@@ -50,11 +50,7 @@ def saveit():
     pyperclip.copy(texto)
     spam = pyperclip.paste()
 def show_image(image):
-    win = tk.Toplevel()
-    win.image = ImageTk.PhotoImage(image)
-    tk.Label(win, image=win.image).pack()
-    win.grab_set()
-    win.wait_window(win)
+    
     image = image.save('savedimage.jpg')
     saveit()
 
